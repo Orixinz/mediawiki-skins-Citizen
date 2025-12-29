@@ -1,13 +1,13 @@
 {
-	"name": "starcitizentools/citizen-skin",
+	"name": "Orixinz/wisdom-skin",
 	"type": "mediawiki-skin",
-	"description": "A beautiful, usable, responsive MediaWiki skin with in-depth extension support. Originally developed for the Star Citizen Wiki.",
+	"description": "A fork of Citizen but with a sidebar. ",
 	"keywords": [
 		"wiki",
 		"MediaWiki",
 		"skin"
 	],
-	"homepage": "https://www.mediawiki.org/wiki/Skin:Citizen",
+	"homepage": "",
 	"readme": "README.md",
 	"license": "GPL-3.0-or-later",
 	"authors": [
@@ -19,9 +19,9 @@
 		}
 	],
 	"support": {
-		"wiki": "https://www.mediawiki.org/wiki/Skin:Citizen",
-		"forum": "https://www.mediawiki.org/wiki/Skin_talk:Citizen",
-		"source": "https://github.com/StarCitizenTools/mediawiki-skins-Citizen"
+		"wiki": "",
+		"forum": "",
+		"source": "https://github.com/Orixinz/mediawiki-skins-Wisdom"
 	},
 	"require": {
 		"composer/installers": "^2|^1.0.1"
@@ -50,7 +50,7 @@
 		]
 	},
 	"extra": {
-		"installer-name": "Citizen"
+		"installer-name": "Wisdom"
 	},
 	"config": {
 		"allow-plugins": {

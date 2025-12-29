@@ -1,5 +1,10 @@
 # Credits
+# Wisdom
 
+## Main Developers
+* [Orixinz](https://github.com/Orixinz)
+
+# Citizen
 ## Direct contributors
 * **[Alistair3149](https://github.com/alistair3149)** authored *Citizen*.
 * **[Octfx](https://github.com/octfx)** wrote and refactored many of the PHP and JS used in *Citizen*. He helped test many of *Citizen's* latest features.

@@ -1,6 +1,6 @@
 ---
 name: Feature request
-about: Suggest an idea for Citizen
+about: Suggest an idea for Wisdom
 title: ''
 labels: enhancement
 assignees: ''

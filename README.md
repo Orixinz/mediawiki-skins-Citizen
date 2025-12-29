@@ -1,4 +1,4 @@
-## nameless
-It could be a name, if I'm out of ideas. I need name ideas.
+## Wisdom
+A fork of Citizen but with a sidebar.
 
-It's a fork of Citizen with a sidebar. For now at least I don't know about the future.
+This project is in *very early development stages*.
