@@ -14,7 +14,7 @@ Thank you for considering contributing to *Citizen*!
 
 If you would like to contribute to *Citizen*, follow these steps:
 
-1. [Fork](https://github.com/StarCitizenTools/mediawiki-skins-Citizen/fork) the *Citizen* repository.
+1. [Fork](https://github.com/Orixinz/mediawiki-skins-Citizen/fork) the *Citizen* repository.
 2. Create a new branch in your fork to make your changes.
 3. Commit your changes to your new branch.
 4. Push your changes to your fork on GitHub.
@@ -27,4 +27,4 @@ You can submit translations via [TranslateWiki.net](https://translatewiki.net/w/
 
 ## Questions
 
-If you have any questions about contributing to *Citizen*, feel free to [open an issue](https://github.com/StarCitizenTools/mediawiki-skins-Citizen/issues/new/choose) in the *Citizen* repository and ask.
+If you have any questions about contributing to *Citizen*, feel free to [open an issue](https://github.com/Orixinz/mediawiki-skins-Citizen/issues/new/choose) in the *Citizen* repository and ask.
