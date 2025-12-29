@@ -83,7 +83,7 @@
 		"wisdom": "resources/mediawiki.less"
 	},
 	"MessagesDirs": {
-		"Citizen": ["i18n"]
+		"Wisdom": ["i18n"]
 	},
 	"AutoloadNamespaces": {
 		"MediaWiki\\Skins\\Citizen\\": "includes/"
@@ -491,7 +491,7 @@
 	},
 	"ResourceFileModulePaths": {
 		"localBasePath": "",
-		"remoteSkinPath": "Citizen"
+		"remoteSkinPath": "Wisdom"
 	},
 	"ResourceModuleSkinStyles": {
 		"wisdom": {
