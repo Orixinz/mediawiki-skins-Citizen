@@ -193,6 +193,62 @@
 			border-right: var( --border-subtle );
 		}
 	}
+
+	#citizen-header-toggle {
+		position: relative;
+		right: 0;
+
+		z-index: 1;
+		&__checkbox {
+			width: var( --header-button-size );
+			height: var( --header-button-size );
+
+			z-index: 1;
+			opacity: 0;
+
+			cursor: pointer;
+			position: absolute;
+
+		}
+
+		&__icon {
+			transform: rotate(90deg);
+			background-color: var( --background-color-button-quiet--hover );
+
+			transition-timing-function: var( --transition-timing-function-ease-out );
+			transition-duration: var( --transition-duration-medium );
+			transition-property: transform;
+
+			// this probably isnt the "best" way of going about this
+			width: var( --header-button-size );
+			height: var( --header-button-size );
+			display: grid;
+			place-items: center;
+			border-radius: var( --border-radius-base );
+
+			&:before {
+				width: var( --header-icon-size );
+				height: var( --header-icon-size );
+			}
+		}
+	}
+
+	#citizen-header-toggle__checkbox:checked ~ span  { // the styles for this were being super funky so i placed this here
+		background-color: rgba(0,0,0,0);
+		transform: rotate(-90deg);
+	}
+
+	.citizen-header:has(#citizen-header-toggle__checkbox:checked) {
+		transform: translateX(calc(10px - var(--header-size)));
+
+		transition-timing-function: var( --transition-timing-function-ease-out );
+		transition-duration: var( --transition-duration-medium );
+		transition-property: transform;
+
+		&:hover {
+			transform: none;
+		}
+	}
 }
 
 @media ( max-width: @max-width-breakpoint-tablet ) {
