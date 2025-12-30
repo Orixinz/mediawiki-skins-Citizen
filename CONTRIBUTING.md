@@ -1,8 +1,8 @@
 # Contributing
 
-Thank you for considering contributing to *Citizen*!
+Thank you for considering contributing to *Wisdom*!
 
-*Citizen* is a small open-source project, and we really appreciate any help! Here are the areas that you can contribute to:
+*Wisdom* is a small open-source project, and we really appreciate any help! Here are the areas that you can contribute to:
 
 - Code patches
 - Documentation improvements
@@ -12,19 +12,16 @@ Thank you for considering contributing to *Citizen*!
 
 ## How to submit a contribution
 
-If you would like to contribute to *Citizen*, follow these steps:
+If you would like to contribute to *Wisdom*, follow these steps:
 
-1. [Fork](https://github.com/Orixinz/mediawiki-skins-Citizen/fork) the *Citizen* repository.
+1. [Fork](https://github.com/Orixinz/mediawiki-skins-Wisdom/fork) the *Wisdom* repository.
 2. Create a new branch in your fork to make your changes.
 3. Commit your changes to your new branch.
 4. Push your changes to your fork on GitHub.
-5. Submit a pull request from your branch to the *Citizen* repository.
+5. Submit a pull request from your branch to the *Wisdom* repository.
 
 We will review your pull request and, if everything looks good, merge it into the main codebase.
 
-## Translations
-You can submit translations via [TranslateWiki.net](https://translatewiki.net/w/i.php?title=Special:Translate&group=mwgithub-star-citizen). They are usually merged bi-weekly.
-
 ## Questions
 
-If you have any questions about contributing to *Citizen*, feel free to [open an issue](https://github.com/Orixinz/mediawiki-skins-Citizen/issues/new/choose) in the *Citizen* repository and ask.
+If you have any questions about contributing to *Wisdom*, feel free to [open an issue](https://github.com/Orixinz/mediawiki-skins-Wisdom/issues/new/choose) in the *Citizen* repository and ask.
