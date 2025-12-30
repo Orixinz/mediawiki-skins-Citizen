@@ -5,9 +5,9 @@ declare( strict_types=1 );
 namespace MediaWiki\Skins\Wisdom\Components;
 
 /**
- * CitizenComponentKeyboardHint component
+ * WisdomComponentKeyboardHint component
  */
-class CitizenComponentKeyboardHint implements CitizenComponent {
+class WisdomComponentKeyboardHint implements WisdomComponent {
 
 	public function __construct(
 		private readonly string $label = '',

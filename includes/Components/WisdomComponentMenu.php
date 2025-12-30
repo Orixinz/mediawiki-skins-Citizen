@@ -7,9 +7,9 @@ namespace MediaWiki\Skins\Wisdom\Components;
 use Countable;
 
 /**
- * CitizenComponentMenu component
+ * WisdomComponentMenu component
  */
-class CitizenComponentMenu implements CitizenComponent, Countable {
+class WisdomComponentMenu implements WisdomComponent, Countable {
 
 	public function __construct(
 		private readonly array $data

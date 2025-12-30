@@ -9,9 +9,9 @@ use MediaWiki\Skin\SkinComponentUtils;
 use MessageLocalizer;
 
 /**
- * CitizenComponentSearchBox component
+ * WisdomComponentSearchBox component
  */
-class CitizenComponentSearchBox implements CitizenComponent {
+class WisdomComponentSearchBox implements WisdomComponent {
 
 	public function __construct(
 		private readonly MessageLocalizer $localizer,
@@ -33,7 +33,7 @@ class CitizenComponentSearchBox implements CitizenComponent {
 		];
 
 		foreach ( $map as $key => $label ) {
-			$keyhint = new CitizenComponentKeyboardHint( $label, $key );
+			$keyhint = new WisdomComponentKeyboardHint( $label, $key );
 			$data[] = $keyhint->getTemplateData();
 		}
 		return $data;

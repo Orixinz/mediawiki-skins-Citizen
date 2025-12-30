@@ -4,7 +4,7 @@ declare( strict_types=1 );
 
 namespace MediaWiki\Skins\Wisdom\Tests\Components;
 
-use MediaWiki\Skins\Wisdom\Components\CitizenComponentPageSidebar;
+use MediaWiki\Skins\Wisdom\Components\WisdomComponentPageSidebar;
 use MediaWiki\Title\Title;
 use MediaWikiUnitTestCase;
 use MessageLocalizer;
@@ -13,9 +13,9 @@ use PHPUnit\Framework\MockObject\MockObject;
 /**
  * @group Citizen
  * @group Components
- * @coversDefaultClass \MediaWiki\Skins\Wisdom\Components\CitizenComponentPageSidebar
+ * @coversDefaultClass \MediaWiki\Skins\Wisdom\Components\WisdomComponentPageSidebar
  */
-class CitizenComponentPageSidebarTest extends MediaWikiUnitTestCase {
+class WisdomComponentPageSidebarTest extends MediaWikiUnitTestCase {
 
 	/**
 	 * @return Title&MockObject
@@ -49,7 +49,7 @@ class CitizenComponentPageSidebarTest extends MediaWikiUnitTestCase {
 			'date' => 'March 15, 2024',
 		];
 
-		$component = new CitizenComponentPageSidebar(
+		$component = new WisdomComponentPageSidebar(
 			$localizer,
 			$title,
 			$lastModifiedData

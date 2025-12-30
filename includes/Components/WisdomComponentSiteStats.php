@@ -16,10 +16,10 @@ use RuntimeException;
 use ValueError;
 
 /**
- * CitizenComponentSiteStats component
+ * WisdomComponentSiteStats component
  * FIXME: Need unit test
  */
-class CitizenComponentSiteStats implements CitizenComponent {
+class WisdomComponentSiteStats implements WisdomComponent {
 
 	private const SITESTATS_ICON_MAP = [
 		'articles' => 'article',

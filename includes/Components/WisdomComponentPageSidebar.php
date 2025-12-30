@@ -8,9 +8,9 @@ use MediaWiki\Title\Title;
 use MessageLocalizer;
 
 /**
- * CitizenComponentPageSidebar component
+ * WisdomComponentPageSidebar component
  */
-class CitizenComponentPageSidebar implements CitizenComponent {
+class WisdomComponentPageSidebar implements WisdomComponent {
 
 	public function __construct(
 		private readonly MessageLocalizer $localizer,
@@ -54,8 +54,8 @@ class CitizenComponentPageSidebar implements CitizenComponent {
 			]
 		];
 
-		// TODO: We should not use CitizenComponentMenu here, but a custom component
-		$menu = new CitizenComponentMenu(
+		// TODO: We should not use WisdomComponentMenu here, but a custom component
+		$menu = new WisdomComponentMenu(
 			[
 				'id' => 'citizen-sidebar-lastmod',
 				'label' => $this->localizer->msg( 'citizen-page-info-lastmod' ),

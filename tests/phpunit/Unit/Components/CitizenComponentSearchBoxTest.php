@@ -11,9 +11,9 @@ use MessageLocalizer;
 /**
  * @group Citizen
  * @group Components
- * @coversDefaultClass \MediaWiki\Skins\Wisdom\Components\CitizenComponentSearchBox
+ * @coversDefaultClass \MediaWiki\Skins\Wisdom\Components\WisdomComponentSearchBox
  */
-class CitizenComponentSearchBoxTest extends MediaWikiUnitTestCase {
+class WisdomComponentSearchBoxTest extends MediaWikiUnitTestCase {
 
 	/**
 	 * @covers ::__construct
@@ -26,7 +26,7 @@ class CitizenComponentSearchBoxTest extends MediaWikiUnitTestCase {
 				'text' => "$key-mocked"
 			] );
 		} );
-		// $component = new CitizenComponentSearchBox( $localizer, [] );
+		// $component = new WisdomComponentSearchBox( $localizer, [] );
 		// $actualData = $component->getTemplateData();
 		// TODO: Add tests
 		$this->expectNotToPerformAssertions();

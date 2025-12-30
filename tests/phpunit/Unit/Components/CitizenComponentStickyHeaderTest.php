@@ -4,15 +4,15 @@ declare( strict_types=1 );
 
 namespace MediaWiki\Skins\Wisdom\Tests\Unit\Components;
 
-use MediaWiki\Skins\Wisdom\Components\CitizenComponentStickyHeader;
+use MediaWiki\Skins\Wisdom\Components\WisdomComponentStickyHeader;
 use MediaWikiUnitTestCase;
 
 /**
  * @group Citizen
  * @group Components
- * @coversDefaultClass \MediaWiki\Skins\Wisdom\Components\CitizenComponentStickyHeader
+ * @coversDefaultClass \MediaWiki\Skins\Wisdom\Components\WisdomComponentStickyHeader
  */
-class CitizenComponentStickyHeaderTest extends MediaWikiUnitTestCase {
+class WisdomComponentStickyHeaderTest extends MediaWikiUnitTestCase {
 
 	/**
 	 * @covers ::__construct
@@ -25,7 +25,7 @@ class CitizenComponentStickyHeaderTest extends MediaWikiUnitTestCase {
 		string $expectedFirstEditIcon,
 		string $expectedSecondEditIcon
 	): void {
-		$header = new CitizenComponentStickyHeader( $veTabFirst );
+		$header = new WisdomComponentStickyHeader( $veTabFirst );
 		$data = $header->getTemplateData();
 
 		$this->assertArrayHasKey( 'array-icon-buttons', $data );

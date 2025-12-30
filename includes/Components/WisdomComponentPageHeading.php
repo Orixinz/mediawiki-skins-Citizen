@@ -19,10 +19,10 @@ use MessageLocalizer;
 use Wikimedia\IPUtils;
 
 /**
- * CitizenComponentPageHeading component
+ * WisdomComponentPageHeading component
  * FIXME: Need unit test
  */
-class CitizenComponentPageHeading implements CitizenComponent {
+class WisdomComponentPageHeading implements WisdomComponent {
 
 	public function __construct(
 		private readonly UserFactory $userFactory,

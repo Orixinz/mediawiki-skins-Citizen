@@ -9,17 +9,17 @@ use MediaWiki\Languages\LanguageConverterFactory;
 use MediaWiki\Languages\LanguageNameUtils;
 use MediaWiki\Permissions\PermissionManager;
 use MediaWiki\Registration\ExtensionRegistry;
-use MediaWiki\Skins\Wisdom\Components\CitizenComponentBodyContent;
-use MediaWiki\Skins\Wisdom\Components\CitizenComponentFooter;
-use MediaWiki\Skins\Wisdom\Components\CitizenComponentMainMenu;
-use MediaWiki\Skins\Wisdom\Components\CitizenComponentPageFooter;
-use MediaWiki\Skins\Wisdom\Components\CitizenComponentPageHeading;
-use MediaWiki\Skins\Wisdom\Components\CitizenComponentPageSidebar;
-use MediaWiki\Skins\Wisdom\Components\CitizenComponentPageTools;
-use MediaWiki\Skins\Wisdom\Components\CitizenComponentSearchBox;
-use MediaWiki\Skins\Wisdom\Components\CitizenComponentSiteStats;
-use MediaWiki\Skins\Wisdom\Components\CitizenComponentStickyHeader;
-use MediaWiki\Skins\Wisdom\Components\CitizenComponentUserInfo;
+use MediaWiki\Skins\Wisdom\Components\WisdomComponentBodyContent;
+use MediaWiki\Skins\Wisdom\Components\WisdomComponentFooter;
+use MediaWiki\Skins\Wisdom\Components\WisdomComponentMainMenu;
+use MediaWiki\Skins\Wisdom\Components\WisdomComponentPageFooter;
+use MediaWiki\Skins\Wisdom\Components\WisdomComponentPageHeading;
+use MediaWiki\Skins\Wisdom\Components\WisdomComponentPageSidebar;
+use MediaWiki\Skins\Wisdom\Components\WisdomComponentPageTools;
+use MediaWiki\Skins\Wisdom\Components\WisdomComponentSearchBox;
+use MediaWiki\Skins\Wisdom\Components\WisdomComponentSiteStats;
+use MediaWiki\Skins\Wisdom\Components\WisdomComponentStickyHeader;
+use MediaWiki\Skins\Wisdom\Components\WisdomComponentUserInfo;
 use MediaWiki\Skins\Wisdom\Partials\Metadata;
 use MediaWiki\Skins\Wisdom\Partials\Theme;
 use MediaWiki\Title\Title;
@@ -109,16 +109,16 @@ class SkinWisdom extends SkinMustache {
 		$this->extractPageToolsFromSidebar( $sidebar, $pageToolsMenu );
 
 		$components = [
-			'data-footer' => new CitizenComponentFooter(
+			'data-footer' => new WisdomComponentFooter(
 				$localizer,
 				$parentData['data-footer']
 			),
-			'data-main-menu' => new CitizenComponentMainMenu( $sidebar ),
-			'data-page-footer' => new CitizenComponentPageFooter(
+			'data-main-menu' => new WisdomComponentMainMenu( $sidebar ),
+			'data-page-footer' => new WisdomComponentPageFooter(
 				$localizer,
 				$parentData['data-footer']['data-info']
 			),
-			'data-page-heading' => new CitizenComponentPageHeading(
+			'data-page-heading' => new WisdomComponentPageHeading(
 				$this->userFactory,
 				$this->genderCache,
 				$this->userIdentityLookup,
@@ -129,12 +129,12 @@ class SkinWisdom extends SkinMustache {
 				$title,
 				$parentData['html-title-heading']
 			),
-			'data-page-sidebar' => new CitizenComponentPageSidebar(
+			'data-page-sidebar' => new WisdomComponentPageSidebar(
 				$localizer,
 				$title,
 				$parentData['data-last-modified']
 			),
-			'data-page-tools' => new CitizenComponentPageTools(
+			'data-page-tools' => new WisdomComponentPageTools(
 				$config,
 				$localizer,
 				$title,
@@ -146,18 +146,18 @@ class SkinWisdom extends SkinMustache {
 				$parentData['data-portlets']['data-languages'] ?? [],
 				$parentData['data-portlets']['data-variants'] ?? []
 			),
-			'data-search-box' => new CitizenComponentSearchBox(
+			'data-search-box' => new WisdomComponentSearchBox(
 				$localizer,
 				$this->extensionRegistry,
 				$parentData['data-search-box']
 			),
-			'data-site-stats' => new CitizenComponentSiteStats(
+			'data-site-stats' => new WisdomComponentSiteStats(
 				$config,
 				$localizer,
 				$lang,
 				$this->languageNameUtils
 			),
-			'data-user-info' => new CitizenComponentUserInfo(
+			'data-user-info' => new WisdomComponentUserInfo(
 				$this->userGroupManager,
 				$lang,
 				$localizer,
@@ -165,10 +165,10 @@ class SkinWisdom extends SkinMustache {
 				$user,
 				$parentData['data-portlets']['data-user-page']
 			),
-			'data-sticky-header' => new CitizenComponentStickyHeader(
+			'data-sticky-header' => new WisdomComponentStickyHeader(
 				$this->isVisualEditorTabPositionFirst( $parentData['data-portlets']['data-views'] )
 			),
-			'data-body-content' => new CitizenComponentBodyContent(
+			'data-body-content' => new WisdomComponentBodyContent(
 				$parentData['html-body-content'],
 				$this->shouldMakeSections( $title )
 			),
@@ -209,7 +209,7 @@ class SkinWisdom extends SkinMustache {
 	private function extractPageToolsFromSidebar( array &$sidebar, array &$pageToolsMenu ) {
 		$restPortlets = $sidebar[ 'array-portlets-rest' ] ?? [];
 		$toolboxMenuIndex = array_search(
-			CitizenComponentPageTools::TOOLBOX_ID,
+			WisdomComponentPageTools::TOOLBOX_ID,
 			array_column(
 				$restPortlets,
 				'id'

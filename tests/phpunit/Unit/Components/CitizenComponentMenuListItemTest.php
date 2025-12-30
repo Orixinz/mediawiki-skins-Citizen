@@ -4,17 +4,17 @@ declare( strict_types=1 );
 
 namespace MediaWiki\Skins\Wisdom\Tests\Components;
 
-use MediaWiki\Skins\Wisdom\Components\CitizenComponentLink;
-use MediaWiki\Skins\Wisdom\Components\CitizenComponentMenuListItem;
+use MediaWiki\Skins\Wisdom\Components\WisdomComponentLink;
+use MediaWiki\Skins\Wisdom\Components\WisdomComponentMenuListItem;
 use MediaWikiUnitTestCase;
 use PHPUnit\Framework\MockObject\MockObject;
 
 /**
  * @group Citizen
  * @group Components
- * @coversDefaultClass \MediaWiki\Skins\Wisdom\Components\CitizenComponentMenuListItem
+ * @coversDefaultClass \MediaWiki\Skins\Wisdom\Components\WisdomComponentMenuListItem
  */
-class CitizenComponentMenuListItemTest extends MediaWikiUnitTestCase {
+class WisdomComponentMenuListItemTest extends MediaWikiUnitTestCase {
 
 	/**
 	 * @covers ::__construct
@@ -27,7 +27,7 @@ class CitizenComponentMenuListItemTest extends MediaWikiUnitTestCase {
 		string $expectedClass,
 		string $expectedId
 	): void {
-		$menuItem = new CitizenComponentMenuListItem(
+		$menuItem = new WisdomComponentMenuListItem(
 			$this->getMockLink(),
 			$class,
 			$id
@@ -59,8 +59,8 @@ class CitizenComponentMenuListItemTest extends MediaWikiUnitTestCase {
 		];
 	}
 
-	private function getMockLink(): CitizenComponentLink&MockObject {
-		$mockLink = $this->createMock( CitizenComponentLink::class );
+	private function getMockLink(): WisdomComponentLink&MockObject {
+		$mockLink = $this->createMock( WisdomComponentLink::class );
 		$mockLink->expects( $this->once() )
 			->method( 'getTemplateData' )
 			->willReturn( [

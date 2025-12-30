@@ -5,16 +5,16 @@ declare( strict_types=1 );
 namespace MediaWiki\Skins\Wisdom\Tests\Components;
 
 use MediaWiki\Message\Message;
-use MediaWiki\Skins\Wisdom\Components\CitizenComponentPageFooter;
+use MediaWiki\Skins\Wisdom\Components\WisdomComponentPageFooter;
 use MediaWikiUnitTestCase;
 use MessageLocalizer;
 
 /**
  * @group Citizen
  * @group Components
- * @coversDefaultClass \MediaWiki\Skins\Wisdom\Components\CitizenComponentPageFooter
+ * @coversDefaultClass \MediaWiki\Skins\Wisdom\Components\WisdomComponentPageFooter
  */
-class CitizenComponentPageFooterTest extends MediaWikiUnitTestCase {
+class WisdomComponentPageFooterTest extends MediaWikiUnitTestCase {
 
 	/**
 	 * @covers ::__construct
@@ -33,7 +33,7 @@ class CitizenComponentPageFooterTest extends MediaWikiUnitTestCase {
 			} );
 
 		// Create component instance
-		$component = new CitizenComponentPageFooter( $localizer, $footerData );
+		$component = new WisdomComponentPageFooter( $localizer, $footerData );
 
 		// Get template data
 		$result = $component->getTemplateData();

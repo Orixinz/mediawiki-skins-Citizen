@@ -7,9 +7,9 @@ namespace MediaWiki\Skins\Wisdom\Components;
 use MessageLocalizer;
 
 /**
- * CitizenComponentFooter component
+ * WisdomComponentFooter component
  */
-class CitizenComponentFooter implements CitizenComponent {
+class WisdomComponentFooter implements WisdomComponent {
 
 	public function __construct(
 		private readonly MessageLocalizer $localizer,

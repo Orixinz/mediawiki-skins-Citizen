@@ -11,9 +11,9 @@ use Wikimedia\Parsoid\Utils\DOMCompat;
 use Wikimedia\Parsoid\Utils\DOMUtils;
 
 /**
- * CitizenComponentBodyContent component
+ * WisdomComponentBodyContent component
  */
-class CitizenComponentBodyContent implements CitizenComponent {
+class WisdomComponentBodyContent implements WisdomComponent {
 
 	/**
 	 * The code below is largely based on the extension MobileFrontend

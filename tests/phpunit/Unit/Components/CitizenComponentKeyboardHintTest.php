@@ -4,15 +4,15 @@ declare( strict_types=1 );
 
 namespace MediaWiki\Skins\Wisdom\Tests\Components;
 
-use MediaWiki\Skins\Wisdom\Components\CitizenComponentKeyboardHint;
+use MediaWiki\Skins\Wisdom\Components\WisdomComponentKeyboardHint;
 use MediaWikiUnitTestCase;
 
 /**
  * @group Citizen
  * @group Components
- * @coversDefaultClass \MediaWiki\Skins\Wisdom\Components\CitizenComponentKeyboardHint
+ * @coversDefaultClass \MediaWiki\Skins\Wisdom\Components\WisdomComponentKeyboardHint
  */
-class CitizenComponentKeyboardHintTest extends MediaWikiUnitTestCase {
+class WisdomComponentKeyboardHintTest extends MediaWikiUnitTestCase {
 
 	/**
 	 * @covers ::__construct
@@ -24,7 +24,7 @@ class CitizenComponentKeyboardHintTest extends MediaWikiUnitTestCase {
 			'key' => 'mock-key'
 		];
 
-		$component = new CitizenComponentKeyboardHint( 'Mock aria label', 'mock-key' );
+		$component = new WisdomComponentKeyboardHint( 'Mock aria label', 'mock-key' );
 		$this->assertSame( $expected, $component->getTemplateData() );
 	}
 }

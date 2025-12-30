@@ -4,64 +4,64 @@ declare( strict_types=1 );
 
 namespace MediaWiki\Skins\Wisdom\Tests\Components;
 
-use MediaWiki\Skins\Wisdom\Components\CitizenComponentButton;
+use MediaWiki\Skins\Wisdom\Components\WisdomComponentButton;
 use MediaWikiUnitTestCase;
 
 /**
  * @group Citizen
  * @group Components
- * @coversDefaultClass \MediaWiki\Skins\Wisdom\Components\CitizenComponentButton
+ * @coversDefaultClass \MediaWiki\Skins\Wisdom\Components\WisdomComponentButton
  */
-class CitizenComponentButtonTest extends MediaWikiUnitTestCase {
+class WisdomComponentButtonTest extends MediaWikiUnitTestCase {
 
 	/**
-	 * Tests CSS class generation logic within CitizenComponentButton.
+	 * Tests CSS class generation logic within WisdomComponentButton.
 	 * This method verifies that the class string is generated correctly based on the button's properties.
 	 *
 	 * @covers ::getClasses
 	 */
 	public function testGetClasses() {
-		$basicButton = new CitizenComponentButton( 'Label' );
+		$basicButton = new WisdomComponentButton( 'Label' );
 		$templateData = $basicButton->getTemplateData();
 		$this->assertStringContainsString( 'cdx-button', $templateData['class'],
 			'Basic button should have cdx-button class.' );
 
-		$primaryButton = new CitizenComponentButton( 'Label', null, null, null, [], 'primary' );
+		$primaryButton = new WisdomComponentButton( 'Label', null, null, null, [], 'primary' );
 		$templateData = $primaryButton->getTemplateData();
 		$this->assertStringContainsString( 'cdx-button--weight-primary', $templateData['class'],
 			'Primary button should have primary weight class.' );
 
-		$iconOnlyButton = new CitizenComponentButton(
+		$iconOnlyButton = new WisdomComponentButton(
 			'Label', null, null, null, [], 'normal', 'default', 'medium', true );
 		$templateData = $iconOnlyButton->getTemplateData();
 		$this->assertStringContainsString( 'cdx-button--icon-only', $templateData['class'],
 			'Icon-only button should have icon-only class.' );
 
-		$destructiveButton = new CitizenComponentButton( 'Label', null, null, null, [],
+		$destructiveButton = new WisdomComponentButton( 'Label', null, null, null, [],
 			'normal', 'destructive' );
 		$templateData = $destructiveButton->getTemplateData();
 		$this->assertStringContainsString( 'cdx-button--action-destructive', $templateData['class'],
 			'Destructive button should have destructive action class.' );
 
-		$progressiveButton = new CitizenComponentButton( 'Label', null, null, null, [],
+		$progressiveButton = new WisdomComponentButton( 'Label', null, null, null, [],
 			'normal', 'progressive' );
 		$templateData = $progressiveButton->getTemplateData();
 		$this->assertStringContainsString( 'cdx-button--action-progressive', $templateData['class'],
 			'Progressive button should have progressive action class.' );
 
-		$quietButton = new CitizenComponentButton( 'Label', null, null, null, [], 'quiet' );
+		$quietButton = new WisdomComponentButton( 'Label', null, null, null, [], 'quiet' );
 		$templateData = $quietButton->getTemplateData();
 		$this->assertStringContainsString( 'cdx-button--weight-quiet', $templateData['class'],
 			'Quiet button should have quiet weight class.' );
 
-		$largeButton = new CitizenComponentButton( 'Label', null, null, null, [], 'normal', 'default', 'large' );
+		$largeButton = new WisdomComponentButton( 'Label', null, null, null, [], 'normal', 'default', 'large' );
 		$templateData = $largeButton->getTemplateData();
 		$this->assertStringContainsString( 'cdx-button--size-large', $templateData['class'],
 			'Large button should have large size class.' );
 	}
 
 	/**
-	 * Tests the `getTemplateData` method of CitizenComponentButton component.
+	 * Tests the `getTemplateData` method of WisdomComponentButton component.
 	 * Each data set provided by `provideButtonData` is passed here to verify the component's output.
 	 *
 	 * @covers ::__construct
@@ -77,7 +77,7 @@ class CitizenComponentButtonTest extends MediaWikiUnitTestCase {
 		?string $href
 	) {
 		// Instantiate the component with the provided configuration.
-		$button = new CitizenComponentButton(
+		$button = new WisdomComponentButton(
 			$label,
 			'icon-sample',
 			'btn-id',
@@ -114,7 +114,7 @@ class CitizenComponentButtonTest extends MediaWikiUnitTestCase {
 	}
 
 	/**
-	 * Provides various configurations of CitizenComponentButton to test different scenarios.
+	 * Provides various configurations of WisdomComponentButton to test different scenarios.
 	 * Each case includes different combinations of the button's properties.
 	 */
 	public static function provideButtonData(): iterable {

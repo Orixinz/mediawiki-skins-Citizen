@@ -4,7 +4,7 @@ declare( strict_types=1 );
 
 namespace MediaWiki\Skins\Wisdom\Tests\Unit\Components;
 
-use MediaWiki\Skins\Wisdom\Components\CitizenComponentLink;
+use MediaWiki\Skins\Wisdom\Components\WisdomComponentLink;
 use MediaWikiUnitTestCase;
 use Message;
 use MessageLocalizer;
@@ -12,9 +12,9 @@ use MessageLocalizer;
 /**
  * @group Citizen
  * @group Components
- * @coversDefaultClass \MediaWiki\Skins\Wisdom\Components\CitizenComponentLink
+ * @coversDefaultClass \MediaWiki\Skins\Wisdom\Components\WisdomComponentLink
  */
-class CitizenComponentLinkTest extends MediaWikiUnitTestCase {
+class WisdomComponentLinkTest extends MediaWikiUnitTestCase {
 
 	/**
 	 * @covers ::__construct
@@ -40,7 +40,7 @@ class CitizenComponentLinkTest extends MediaWikiUnitTestCase {
 			} );
 
 		// Create the component
-		$linkComponent = new CitizenComponentLink( $href, $text, $icon, $localizer, $accessKeyHint );
+		$linkComponent = new WisdomComponentLink( $href, $text, $icon, $localizer, $accessKeyHint );
 		$actual = $linkComponent->getTemplateData();
 
 		// Assert the expected values

@@ -4,14 +4,14 @@ declare( strict_types=1 );
 
 namespace MediaWiki\Skins\Wisdom\Tests\Components;
 
-use MediaWiki\Skins\Wisdom\Components\CitizenComponentBodyContent;
+use MediaWiki\Skins\Wisdom\Components\WisdomComponentBodyContent;
 use MediaWikiIntegrationTestCase;
 
 /**
- * @coversDefaultClass \MediaWiki\Skins\Wisdom\Components\CitizenComponentBodyContent
+ * @coversDefaultClass \MediaWiki\Skins\Wisdom\Components\WisdomComponentBodyContent
  * @group Citizen
  */
-class CitizenComponentBodyContentTest extends MediaWikiIntegrationTestCase {
+class WisdomComponentBodyContentTest extends MediaWikiIntegrationTestCase {
 
 	/**
 	 * @covers ::getTemplateData
@@ -19,7 +19,7 @@ class CitizenComponentBodyContentTest extends MediaWikiIntegrationTestCase {
 	public function testSectioningDisabled() {
 		$html = '<h2>Foo</h2><p>Bar</p>';
 
-		$component = new CitizenComponentBodyContent( $html, false );
+		$component = new WisdomComponentBodyContent( $html, false );
 		$data = $component->getTemplateData();
 
 		$this->assertEquals( $html, $data['html-body-content'] );
@@ -36,7 +36,7 @@ class CitizenComponentBodyContentTest extends MediaWikiIntegrationTestCase {
 	 * @covers ::prepareHeading
 	 */
 	public function testSectioning( string $message, string $inputHtml, string $expectedHtml ): void {
-		$component = new CitizenComponentBodyContent( $inputHtml, true );
+		$component = new WisdomComponentBodyContent( $inputHtml, true );
 
 		$data = $component->getTemplateData();
 

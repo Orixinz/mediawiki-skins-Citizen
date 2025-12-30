@@ -7,10 +7,10 @@ namespace MediaWiki\Skins\Wisdom\Components;
 use MessageLocalizer;
 
 /**
- * CitizenComponentPageFooter component
+ * WisdomComponentPageFooter component
  * FIXME: Need unit test
  */
-class CitizenComponentPageFooter implements CitizenComponent {
+class WisdomComponentPageFooter implements WisdomComponent {
 
 	public function __construct(
 		private readonly MessageLocalizer $localizer,

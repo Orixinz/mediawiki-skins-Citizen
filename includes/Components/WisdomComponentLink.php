@@ -9,9 +9,9 @@ use MediaWiki\Linker\Linker;
 use MessageLocalizer;
 
 /**
- * CitizenComponentLink component
+ * WisdomComponentLink component
  */
-class CitizenComponentLink implements CitizenComponent {
+class WisdomComponentLink implements WisdomComponent {
 
 	public function __construct(
 		private readonly string $href,

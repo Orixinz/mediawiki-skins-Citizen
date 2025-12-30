@@ -9,7 +9,7 @@ namespace MediaWiki\Skins\Wisdom\Components;
  *
  * @internal
  */
-interface CitizenComponent {
+interface WisdomComponent {
 
 	public function getTemplateData(): array;
 }

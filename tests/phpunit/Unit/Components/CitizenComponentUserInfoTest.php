@@ -9,9 +9,9 @@ use MediaWikiUnitTestCase;
 /**
  * @group Citizen
  * @group Components
- * @coversDefaultClass \MediaWiki\Skins\Wisdom\Components\CitizenComponentUserInfo
+ * @coversDefaultClass \MediaWiki\Skins\Wisdom\Components\WisdomComponentUserInfo
  */
-class CitizenComponentUserInfoTest extends MediaWikiUnitTestCase {
+class WisdomComponentUserInfoTest extends MediaWikiUnitTestCase {
 
 	/**
 	 * @covers ::getTemplateData

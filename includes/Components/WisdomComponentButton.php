@@ -5,13 +5,13 @@ declare( strict_types=1 );
 namespace MediaWiki\Skins\Wisdom\Components;
 
 /**
- * CitizenComponentButton component
+ * WisdomComponentButton component
  *
  * This implements the Codex CSS-only button component
  * Based on VectorComponentButton
  * @see https://doc.wikimedia.org/codex/main/components/demos/button.html
  */
-class CitizenComponentButton implements CitizenComponent {
+class WisdomComponentButton implements WisdomComponent {
 
 	public function __construct(
 		private string $label = '',

@@ -4,7 +4,7 @@ declare( strict_types=1 );
 
 namespace MediaWiki\Skins\Wisdom\Tests\Components;
 
-use MediaWiki\Skins\Wisdom\Components\CitizenComponentFooter;
+use MediaWiki\Skins\Wisdom\Components\WisdomComponentFooter;
 use MediaWikiUnitTestCase;
 use Message;
 use MessageLocalizer;
@@ -12,9 +12,9 @@ use MessageLocalizer;
 /**
  * @group Citizen
  * @group Components
- * @coversDefaultClass \MediaWiki\Skins\Wisdom\Components\CitizenComponentFooter
+ * @coversDefaultClass \MediaWiki\Skins\Wisdom\Components\WisdomComponentFooter
  */
-class CitizenComponentFooterTest extends MediaWikiUnitTestCase {
+class WisdomComponentFooterTest extends MediaWikiUnitTestCase {
 
 	public function provideFooterData(): array {
 		return [
@@ -55,7 +55,7 @@ class CitizenComponentFooterTest extends MediaWikiUnitTestCase {
 			] );
 		} );
 
-		$component = new CitizenComponentFooter( $localizer, $footerData );
+		$component = new WisdomComponentFooter( $localizer, $footerData );
 		$expected = array_merge( $footerData, [
 			'msg-citizen-footer-desc' => 'citizen-footer-desc-mocked',
 			'msg-citizen-footer-tagline' => 'citizen-footer-tagline-mocked'

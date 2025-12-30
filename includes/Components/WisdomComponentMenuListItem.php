@@ -5,12 +5,12 @@ declare( strict_types=1 );
 namespace MediaWiki\Skins\Wisdom\Components;
 
 /**
- * CitizenComponentMenuListItem component
+ * WisdomComponentMenuListItem component
  */
-class CitizenComponentMenuListItem implements CitizenComponent {
+class WisdomComponentMenuListItem implements WisdomComponent {
 
 	public function __construct(
-		private readonly CitizenComponentLink $link,
+		private readonly WisdomComponentLink $link,
 		private readonly string $class = '',
 		private readonly string $id = ''
 	) {

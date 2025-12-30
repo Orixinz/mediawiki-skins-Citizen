@@ -5,9 +5,9 @@ declare( strict_types=1 );
 namespace MediaWiki\Skins\Wisdom\Components;
 
 /**
- * CitizenComponentStickyHeader component
+ * WisdomComponentStickyHeader component
  */
-class CitizenComponentStickyHeader implements CitizenComponent {
+class WisdomComponentStickyHeader implements WisdomComponent {
 
 	private const SHARE_ICON = [
 		'id' => 'citizen-share-sticky-header',
@@ -78,7 +78,7 @@ class CitizenComponentStickyHeader implements CitizenComponent {
 		];
 		$iconButtons = [];
 		foreach ( $icons as $icon ) {
-			$button = new CitizenComponentButton(
+			$button = new WisdomComponentButton(
 				"",
 				$icon[ 'icon' ],
 				$icon[ 'id' ],

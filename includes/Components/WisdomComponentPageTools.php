@@ -12,10 +12,10 @@ use MediaWiki\User\User;
 use MessageLocalizer;
 
 /**
- * CitizenComponentPageTools component
+ * WisdomComponentPageTools component
  * FIXME: Need unit test
  */
-class CitizenComponentPageTools implements CitizenComponent {
+class WisdomComponentPageTools implements WisdomComponent {
 
 	/** @var string */
 	public const TOOLBOX_ID = 'p-tb';

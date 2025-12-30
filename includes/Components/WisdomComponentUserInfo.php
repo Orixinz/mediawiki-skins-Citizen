@@ -13,9 +13,9 @@ use MediaWiki\User\UserGroupManager;
 use MessageLocalizer;
 
 /**
- * CitizenComponentUserInfo component
+ * WisdomComponentUserInfo component
  */
-class CitizenComponentUserInfo implements CitizenComponent {
+class WisdomComponentUserInfo implements WisdomComponent {
 
 	public function __construct(
 		private readonly UserGroupManager $userGroupManager,
@@ -95,12 +95,12 @@ class CitizenComponentUserInfo implements CitizenComponent {
 				continue;
 			}
 
-			$link = new CitizenComponentLink(
+			$link = new WisdomComponentLink(
 				$title->getLinkURL(),
 				ucfirst( $text )
 			);
 
-			$listItem = new CitizenComponentMenuListItem( $link, 'citizen-userInfo-usergroup', $id );
+			$listItem = new WisdomComponentMenuListItem( $link, 'citizen-userInfo-usergroup', $id );
 
 			$listItems[] = $listItem->getTemplateData();
 		}
@@ -133,7 +133,7 @@ class CitizenComponentUserInfo implements CitizenComponent {
 			);
 		}
 
-		$menu = new CitizenComponentMenu( [
+		$menu = new WisdomComponentMenu( [
 			'id' => 'citizen-user-menu-userpage',
 			'class' => null,
 			'label' => null,

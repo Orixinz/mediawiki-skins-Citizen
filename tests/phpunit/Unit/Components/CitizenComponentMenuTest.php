@@ -4,15 +4,15 @@ declare( strict_types=1 );
 
 namespace MediaWiki\Skins\Wisdom\Tests\Unit\Components;
 
-use MediaWiki\Skins\Wisdom\Components\CitizenComponentMenu;
+use MediaWiki\Skins\Wisdom\Components\WisdomComponentMenu;
 use MediaWikiUnitTestCase;
 
 /**
  * @group Citizen
  * @group Components
- * @coversDefaultClass \MediaWiki\Skins\Wisdom\Components\CitizenComponentMenu
+ * @coversDefaultClass \MediaWiki\Skins\Wisdom\Components\WisdomComponentMenu
  */
-class CitizenComponentMenuTest extends MediaWikiUnitTestCase {
+class WisdomComponentMenuTest extends MediaWikiUnitTestCase {
 
 	/**
 	 * This test checks if the count method returns the correct number of items
@@ -20,8 +20,8 @@ class CitizenComponentMenuTest extends MediaWikiUnitTestCase {
 	 * @dataProvider provideCountData
 	 */
 	public function testCount( array $data, int $expected ) {
-		// Create a new CitizenComponentMenu object
-		$menu = new CitizenComponentMenu( $data );
+		// Create a new WisdomComponentMenu object
+		$menu = new WisdomComponentMenu( $data );
 
 		// Check if the count method returns the correct number of items
 		$this->assertSame( $expected, $menu->count() );
@@ -49,8 +49,8 @@ class CitizenComponentMenuTest extends MediaWikiUnitTestCase {
 	 * @dataProvider provideMenuData
 	 */
 	public function testGetTemplateData( array $data ) {
-		// Create a new CitizenComponentMenu object
-		$menu = new CitizenComponentMenu( $data );
+		// Create a new WisdomComponentMenu object
+		$menu = new WisdomComponentMenu( $data );
 
 		// Call the getTemplateData method
 		$actualData = $menu->getTemplateData();

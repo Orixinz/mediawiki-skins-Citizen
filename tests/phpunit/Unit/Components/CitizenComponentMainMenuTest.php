@@ -4,30 +4,30 @@ declare( strict_types=1 );
 
 namespace MediaWiki\Skins\Wisdom\Tests\Unit\Components;
 
-use MediaWiki\Skins\Wisdom\Components\CitizenComponent;
-use MediaWiki\Skins\Wisdom\Components\CitizenComponentMainMenu;
+use MediaWiki\Skins\Wisdom\Components\WisdomComponent;
+use MediaWiki\Skins\Wisdom\Components\WisdomComponentMainMenu;
 use MediaWikiUnitTestCase;
 
 /**
  * @group Citizen
  * @group Components
- * @coversDefaultClass \MediaWiki\Skins\Wisdom\Components\CitizenComponentMainMenu
+ * @coversDefaultClass \MediaWiki\Skins\Wisdom\Components\WisdomComponentMainMenu
  */
-class CitizenComponentMainMenuTest extends MediaWikiUnitTestCase {
+class WisdomComponentMainMenuTest extends MediaWikiUnitTestCase {
 
 	/**
-	 * This test checks if the CitizenComponentMainMenu class can be instantiated
+	 * This test checks if the WisdomComponentMainMenu class can be instantiated
 	 * @covers ::__construct
 	 */
 	public function testConstruct() {
 		// Mock the sidebar data
 		$sidebarData = [];
 
-		// Create a new CitizenComponentMainMenu object
-		$mainMenu = new CitizenComponentMainMenu( $sidebarData );
+		// Create a new WisdomComponentMainMenu object
+		$mainMenu = new WisdomComponentMainMenu( $sidebarData );
 
-		// Assert that the object is an instance of CitizenComponent
-		$this->assertInstanceOf( CitizenComponent::class, $mainMenu );
+		// Assert that the object is an instance of WisdomComponent
+		$this->assertInstanceOf( WisdomComponent::class, $mainMenu );
 	}
 
 	/**
@@ -36,8 +36,8 @@ class CitizenComponentMainMenuTest extends MediaWikiUnitTestCase {
 	 * @dataProvider provideMainMenuData
 	 */
 	public function testGetTemplateData( array $sidebarData ) {
-		// Create a new CitizenComponentMainMenu object
-		$mainMenu = new CitizenComponentMainMenu( $sidebarData );
+		// Create a new WisdomComponentMainMenu object
+		$mainMenu = new WisdomComponentMainMenu( $sidebarData );
 
 		// Call the getTemplateData method
 		$templateData = $mainMenu->getTemplateData();
