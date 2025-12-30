@@ -98,6 +98,7 @@
 
 	&__inner {
 		display: flex;
+		flex-wrap: wrap;
 		flex-direction: var( --header-icon-direction );
 		justify-content: center;
 		border-bottom: var( --border-subtle );
@@ -131,9 +132,12 @@
 
 // Notifications
 #p-notifications {
+	.citizen-menu__heading {
+		display: none;
+	}
 	ul {
 		display: flex;
-		flex-direction: var( --header-direction );
+		flex-direction: var( --header-icon-direction );
 		gap: var( --space-xxs );
 		align-items: center;
 	}
