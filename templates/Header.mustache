@@ -7,9 +7,12 @@
 	{{>Header__logo}}
 	<div class="citizen-header__inner">
 		{{#data-search-box}}{{>Search}}{{/data-search-box}}
-		{{>Preferences}}
-		{{>UserMenu}}
-		{{#data-portlets.data-notifications}}{{>Menu}}{{/data-portlets.data-notifications}}
+		{{>MobileNav}}
+		<div class="citizen-header__options">
+			{{>Preferences}}
+			{{>UserMenu}}
+			{{#data-portlets.data-notifications}}{{>Menu}}{{/data-portlets.data-notifications}}
+		</div>
 	</div>
 	{{>Drawer__button}}
 	{{>Drawer}}

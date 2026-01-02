@@ -104,6 +104,13 @@
 		border-bottom: var( --border-subtle );
 	}
 
+	&__options, &__mobilenav {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: var( --header-icon-direction );
+		justify-content: center;
+	}
+
 	.citizen-dropdown {
 		&-summary {
 			display: grid;
@@ -192,6 +199,11 @@
 			border-bottom: 0;
 			border-right: var( --border-subtle );
 		}
+
+
+		&__mobilenav {
+			display: none;
+		}
 	}
 
 	#citizen-header-toggle {
@@ -252,9 +264,18 @@
 }
 
 @media ( max-width: @max-width-breakpoint-tablet ) {
+	// mobile header
+
 	.citizen-header {
 		&__inner {
 			border: none;
 		}
+		&__options {
+			display: none;
+		}
+	}
+
+	#citizen-header-toggle {
+		display: none;
 	}
 }
