@@ -20,6 +20,7 @@ use MediaWiki\Skins\Wisdom\Components\WisdomComponentSearchBox;
 use MediaWiki\Skins\Wisdom\Components\WisdomComponentSiteStats;
 use MediaWiki\Skins\Wisdom\Components\WisdomComponentStickyHeader;
 use MediaWiki\Skins\Wisdom\Components\WisdomComponentUserInfo;
+use MediaWiki\Skins\Wisdom\Components\WisdomComponentMobileNav;
 use MediaWiki\Skins\Wisdom\Partials\Metadata;
 use MediaWiki\Skins\Wisdom\Partials\Theme;
 use MediaWiki\Title\Title;
@@ -172,6 +173,10 @@ class SkinWisdom extends SkinMustache {
 				$parentData['html-body-content'],
 				$this->shouldMakeSections( $title )
 			),
+			'data-mobilenav'=> new WisdomComponentMobileNav(
+				$localizer,
+				$parentData['data-mobilenav']
+			)
 		];
 
 		foreach ( $components as $key => $component ) {
